@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NoDB Password Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">NoDB Password Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Login Section -->
+    <div id="Login_Section" class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="username">Your Unique Encryption Key<span class="small text-muted">(Keep this secret!)</span></label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your key">
+                <label for="backupText">Backup Data or Retrieve Previous Data<span class="small text-muted">(Paste your hash here)</span></label>
+                <textarea class="form-control" id="backupText" rows="5" style="overflow-y: auto;" placeholder="Paste your encrypted data here, If you encrypting you will get your hash here"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="convertFormValues()">Convert</button>
+        </form>
+    </div>
+
+    <!-- Saved Passwords Section -->
+    <div class="container mt-5">
+        <h3 class="text-center">Your Saved Passwords</h3>
+        <br>
+        <table id="passwordTable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Website</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Js bro will take care  -->
+            </tbody>
+        </table>
+        <div class="form-group mt-3">
+            <label for="websiteInput">Website</label>
+            <input type="text" class="form-control" id="websiteInput" placeholder="Enter website name">
+
+            <label for="userInput">User</label>
+            <input type="text" class="form-control" id="userInput" placeholder="Enter username">
+
+            <label for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
+            <button type="button" class="btn btn-primary mt-2" onclick="addRow()">Add Row</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-5">
+        <p>&copy; Made with love by <a href="https://www.facebook.com/0Shohan0/">Shohanur Rahman</a></p>
+    </footer>
+
+    <!-- Bootstrap and Custom Scripts -->
+    <script src="logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
